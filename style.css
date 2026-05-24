@@ -783,3 +783,6 @@ input,textarea{font-family:var(--font-body)}
   .hero-stats{gap:16px}
   .resume-cta-right{flex-direction:column}
 }
+
+/* React badge */
+.skill-badge.react{background:#61dafb;color:#000}
