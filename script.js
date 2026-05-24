@@ -221,15 +221,30 @@ document.addEventListener('keydown', e => {
   }
 });
 
-/* ── CONTACT FORM — Native Formspree (no JS interference) ── */
+/* ── CONTACT FORM — Native Formspree ── */
 const form      = document.getElementById('contactForm');
 const submitBtn = document.getElementById('submitBtn');
+const successMsg = document.getElementById('formSuccess');
 
-// Just show loading spinner — form submits natively to Formspree
+// Check if user just came back from Formspree redirect (success)
+if (window.location.hash === '#contact' && document.referrer.includes('formspree.io')) {
+  if (successMsg) successMsg.style.display = 'flex';
+  setTimeout(() => { if (successMsg) successMsg.style.display = 'none'; }, 6000);
+}
+
+// Also check via sessionStorage
+if (sessionStorage.getItem('formSubmitted') === 'true') {
+  sessionStorage.removeItem('formSubmitted');
+  if (successMsg) successMsg.style.display = 'flex';
+  setTimeout(() => { if (successMsg) successMsg.style.display = 'none'; }, 6000);
+}
+
+// Show loading spinner on submit
 form?.addEventListener('submit', e => {
+  sessionStorage.setItem('formSubmitted', 'true');
   submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
   submitBtn.disabled = true;
-  // Native form submission takes over — no preventDefault
+  // Native form submission takes over
 });
 
 /* ── BACK TO TOP ── */
