@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Archi Priya | Full Stack Developer</title>
+  <meta name="description" content="MCA Student at Banasthali Vidyapith. Full Stack Developer skilled in Node.js, MongoDB, React, and JavaScript. Open to internships and placements." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- ── CURSOR ── -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- ── PROGRESS BAR ── -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- ════════════════════ NAVBAR ════════════════════ -->
+  <nav class="navbar" id="navbar">
+    <a href="#home" class="nav-logo">
+      <span class="logo-bracket">&lt;</span>AP<span class="logo-bracket">/&gt;</span>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#skills" class="nav-link">Skills</a></li>
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#dsa" class="nav-link">DSA</a></li>
+      <li><a href="#achievements" class="nav-link">Achievements</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <div class="nav-status">
+        <span class="status-pulse"></span> Open to work
+      </div>
+      <a href="resume.pdf" class="btn btn-outline btn-sm" download>
+        <i class="fas fa-download"></i> Resume
+      </a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ════════════════════ HERO ════════════════════ -->
+  <section class="hero" id="home">
+    <div class="hero-bg">
+      <div class="noise-overlay"></div>
+      <div class="grid-overlay"></div>
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="orb orb-3"></div>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-eyebrow reveal">
+        <span class="eyebrow-line"></span>
+        <span class="eyebrow-tag">MCA Student · Banasthali Vidyapith</span>
+      </div>
+
+      <h1 class="hero-name reveal">
+        <span class="name-line">Archi</span>
+        <span class="name-line accent-stroke">Priya</span>
+      </h1>
+
+      <div class="hero-role reveal">
+        <span class="role-prefix">I build</span>
+        <div class="role-rotator">
+          <span>Full Stack Web Apps</span>
+          <span>Backend Systems</span>
+          <span>REST APIs</span>
+          <span>Scalable Solutions</span>
+        </div>
+      </div>
+
+      <p class="hero-tagline reveal">
+        Transforming ideas into production-ready applications —
+        <br />one commit at a time.
+      </p>
+
+      <div class="hero-cta reveal">
+        <a href="#projects" class="btn btn-primary btn-glow">
+          <i class="fas fa-rocket"></i> View My Work
+        </a>
+        <a href="#contact" class="btn btn-ghost">
+          <i class="fas fa-paper-plane"></i> Hire Me
+        </a>
+        <a href="https://github.com/archipriya03" target="_blank" class="btn btn-icon" aria-label="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+
+      <div class="hero-stats reveal">
+        <div class="h-stat">
+          <span class="h-stat-num" data-target="3">0</span>
+          <span class="h-stat-suffix">+</span>
+          <span class="h-stat-label">Live Projects</span>
+        </div>
+        <div class="h-stat-sep"></div>
+        <div class="h-stat">
+          <span class="h-stat-num" data-target="9">0</span>
+          <span class="h-stat-suffix">+</span>
+          <span class="h-stat-label">CGPA</span>
+        </div>
+        <div class="h-stat-sep"></div>
+        <div class="h-stat">
+          <span class="h-stat-num" data-target="6">0</span>
+          <span class="h-stat-suffix">+</span>
+          <span class="h-stat-label">Technologies</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-terminal reveal">
+      <div class="terminal-bar">
+        <span class="t-dot red"></span><span class="t-dot yellow"></span><span class="t-dot green"></span>
+        <span class="t-title">archi@portfolio ~ </span>
+      </div>
+      <div class="terminal-body">
+        <div class="t-line"><span class="t-prompt">$</span> <span class="t-cmd" data-text="whoami">whoami</span></div>
+        <div class="t-line t-output">Archi Priya — Full Stack Developer</div>
+        <div class="t-line"><span class="t-prompt">$</span> <span class="t-cmd" data-text="cat skills.json">cat skills.json</span></div>
+        <div class="t-line t-output t-json">{ <span class="t-key">"stack"</span>: [<span class="t-val">"Node.js"</span>, <span class="t-val">"MongoDB"</span>, <span class="t-val">"Express"</span>, <span class="t-val">"JS"</span>] }</div>
+        <div class="t-line"><span class="t-prompt">$</span> <span class="t-cmd" data-text="git log --oneline -1">git log --oneline -1</span></div>
+        <div class="t-line t-output"><span class="t-hash">a3f9c2b</span> feat: deployed TradeVault to production 🚀</div>
+        <div class="t-line"><span class="t-prompt">$</span> <span class="t-cursor">▌</span></div>
+      </div>
+    </div>
+
+    <div class="hero-scroll-hint">
+      <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
+      <span>Scroll to explore</span>
+    </div>
+  </section>
+
+  <!-- ════════════════════ ABOUT ════════════════════ -->
+  <section class="section about" id="about">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">// 01 — About Me</span>
+      </div>
+      <div class="about-grid">
+        <div class="about-left reveal">
+          <h2 class="section-title">Crafting code,<br /><em>Creating impact</em></h2>
+          <p class="about-text">
+            I'm an MCA student at <strong>Banasthali Vidyapith</strong>, passionate about building full-stack web applications that solve real problems. My focus lies at the intersection of clean backend architecture and intuitive frontend experiences.
+          </p>
+          <p class="about-text">
+            With a growing understanding of <strong>data structures, backend systems, and modern web technologies</strong>, I approach every project with a problem-solving mindset — focusing on writing clean, simple, and functional code while continuously learning and improving.
+          </p>
+          <div class="about-tags">
+            <span><i class="fas fa-code"></i> Coding</span>
+            <span><i class="fas fa-pencil-alt"></i> Sketching</span>
+            <span><i class="fas fa-music"></i> Violin</span>
+            <span><i class="fas fa-laptop-code"></i> Learning New Technologies</span>
+          </div>
+        </div>
+
+        <div class="about-right reveal">
+          <div class="about-card edu-card">
+            <div class="card-accent-bar"></div>
+            <div class="about-card-icon"><i class="fas fa-graduation-cap"></i></div>
+            <h4>Education</h4>
+            <div class="edu-item">
+              <p><strong>MCA — Master of Computer Applications</strong></p>
+              <span class="edu-meta">Banasthali Vidyapith &nbsp;·&nbsp; 2025–2027 &nbsp;·&nbsp; <em class="cgpa">CGPA: 9+</em></span>
+            </div>
+            <div class="edu-divider"></div>
+            <div class="edu-item">
+              <p><strong>BCA — Bachelor of Computer Applications</strong></p>
+              <span class="edu-meta">Banasthali Vidyapith &nbsp;·&nbsp; 2022–2025 &nbsp;·&nbsp; <em class="cgpa">CGPA: 9+</em></span>
+            </div>
+          </div>
+
+          <div class="about-card-row">
+            <div class="about-card mini-card">
+              <div class="about-card-icon"><i class="fas fa-bullseye"></i></div>
+              <h4>Focus</h4>
+              <p>Full Stack Dev<br/>Backend · DSA</p>
+            </div>
+            <div class="about-card mini-card">
+              <div class="about-card-icon trophy"><i class="fas fa-trophy"></i></div>
+              <h4>Experience</h4>
+              <p>EY Techathon<br/>NSS Volunteer</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════ SKILLS ════════════════════ -->
+  <section class="section skills" id="skills">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">// 02 — Skills</span>
+        <h2 class="section-title centered">My <em>Tech Stack</em></h2>
+        <p class="section-sub">Tools and technologies I use to build production-ready software</p>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skill-category reveal">
+          <div class="skill-cat-header">
+            <div class="cat-icon"><i class="fas fa-terminal"></i></div>
+            <h3>Languages</h3>
+          </div>
+          <div class="skill-items">
+            <div class="skill-item">
+              <div class="skill-info"><span class="skill-badge java">☕</span><span>Java</span><span class="skill-pct">80%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span class="skill-badge js">JS</span><span>JavaScript</span><span class="skill-pct">85%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="skill-category reveal">
+          <div class="skill-cat-header">
+            <div class="cat-icon"><i class="fas fa-server"></i></div>
+            <h3>Backend & DB</h3>
+          </div>
+          <div class="skill-items">
+            <div class="skill-item">
+              <div class="skill-info"><span class="skill-badge node">N</span><span>Node.js</span><span class="skill-pct">78%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="78"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span class="skill-badge express">Ex</span><span>Express.js</span><span class="skill-pct">75%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span class="skill-badge mongo">🍃</span><span>MongoDB</span><span class="skill-pct">75%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span class="skill-badge mysql">SQL</span><span>MySQL</span><span class="skill-pct">72%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="72"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category reveal">
+          <div class="skill-cat-header">
+            <div class="cat-icon"><i class="fas fa-globe"></i></div>
+            <h3>Frontend & Web</h3>
+          </div>
+          <div class="skill-items">
+            <div class="skill-item">
+              <div class="skill-info"><span class="skill-badge html">H5</span><span>HTML5</span><span class="skill-pct">90%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span class="skill-badge css">CSS</span><span>CSS3</span><span class="skill-pct">85%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span class="skill-badge api">API</span><span>REST APIs</span><span class="skill-pct">78%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="78"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span class="skill-badge php">PHP</span><span>PHP</span><span class="skill-pct">60%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="60"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category reveal">
+          <div class="skill-cat-header">
+            <div class="cat-icon"><i class="fas fa-tools"></i></div>
+            <h3>Tools & Concepts</h3>
+          </div>
+          <div class="tools-grid">
+            <span class="tool-chip"><i class="fab fa-git-alt"></i> Git</span>
+            <span class="tool-chip"><i class="fab fa-github"></i> GitHub</span>
+            <span class="tool-chip"><i class="fas fa-key"></i> JWT</span>
+            <span class="tool-chip"><i class="fas fa-cloud"></i> Cloudinary</span>
+            <span class="tool-chip"><i class="fas fa-map-marker-alt"></i> Leaflet.js</span>
+            <span class="tool-chip"><i class="fas fa-lock"></i> Passport.js</span>
+            <span class="tool-chip"><i class="fas fa-cogs"></i> MVC Pattern</span>
+            <span class="tool-chip"><i class="fas fa-shield-alt"></i> RBAC</span>
+            <span class="tool-chip"><i class="fas fa-database"></i> Mongoose</span>
+            <span class="tool-chip"><i class="fas fa-server"></i> Render</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════ PROJECTS ════════════════════ -->
+  <section class="section projects" id="projects">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">// 03 — Projects</span>
+        <h2 class="section-title centered">Live <em>Projects</em></h2>
+        <p class="section-sub">Real applications — deployed, functional, and production-ready</p>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- ── WANDERLUST ── -->
+        <div class="project-card reveal" data-project="wanderlust">
+          <div class="project-image wanderlust-bg">
+            <div class="project-img-inner">
+              <i class="fas fa-map-marked-alt project-icon"></i>
+              <div class="project-img-blur"></div>
+            </div>
+            <div class="project-overlay">
+              <a href="https://wanderlust-project-jruw.onrender.com" target="_blank" class="overlay-btn"><i class="fas fa-external-link-alt"></i> Live Site</a>
+              <button class="overlay-btn" onclick="openModal('wanderlust')"><i class="fas fa-eye"></i> Details</button>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-meta">
+              <span class="status-tag completed"><i class="fas fa-circle"></i> Deployed</span>
+              <span class="project-year">2024</span>
+            </div>
+            <h3 class="project-title">Wanderlust</h3>
+            <p class="project-desc">Airbnb-style property listing platform with full auth, cloud image uploads, and interactive maps. Live on Render.</p>
+            <div class="project-stack">
+              <span>Node.js</span><span>Express</span><span>MongoDB</span><span>EJS</span><span>Cloudinary</span><span>Leaflet.js</span>
+            </div>
+            <div class="project-actions">
+              <button class="btn btn-primary btn-sm" onclick="openModal('wanderlust')">
+                <i class="fas fa-info-circle"></i> Case Study
+              </button>
+              <a href="https://github.com/archipriya03/Wanderlust-" target="_blank" class="btn btn-ghost btn-sm">
+                <i class="fab fa-github"></i> Code
+              </a>
+              <a href="https://wanderlust-project-jruw.onrender.com" target="_blank" class="btn btn-live btn-sm">
+                <i class="fas fa-external-link-alt"></i> Live
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── RBAC ── -->
+        <div class="project-card reveal" data-project="rbac">
+          <div class="project-image rbac-bg">
+            <div class="project-img-inner">
+              <i class="fas fa-shield-alt project-icon"></i>
+              <div class="project-img-blur"></div>
+            </div>
+            <div class="project-overlay">
+              <a href="https://rbac-nodejs-project.onrender.com" target="_blank" class="overlay-btn"><i class="fas fa-external-link-alt"></i> Live API</a>
+              <button class="overlay-btn" onclick="openModal('rbac')"><i class="fas fa-eye"></i> Details</button>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-meta">
+              <span class="status-tag completed"><i class="fas fa-circle"></i> Deployed</span>
+              <span class="project-year">2024</span>
+            </div>
+            <h3 class="project-title">RBAC System</h3>
+            <p class="project-desc">Production-grade Role-Based Access Control with JWT auth. Three-tier permission model: Admin, Manager, User. Deployed REST API.</p>
+            <div class="project-stack">
+              <span>Node.js</span><span>Express</span><span>MongoDB</span><span>JWT</span><span>bcrypt</span>
+            </div>
+            <div class="project-actions">
+              <button class="btn btn-primary btn-sm" onclick="openModal('rbac')">
+                <i class="fas fa-info-circle"></i> Case Study
+              </button>
+              <a href="https://github.com/archipriya03/RBAC-nodejs" target="_blank" class="btn btn-ghost btn-sm">
+                <i class="fab fa-github"></i> Code
+              </a>
+              <a href="https://rbac-nodejs-project.onrender.com" target="_blank" class="btn btn-live btn-sm">
+                <i class="fas fa-external-link-alt"></i> Live
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── TRADEVAULT ── -->
+        <div class="project-card reveal" data-project="tradevault">
+          <div class="project-image tradevault-bg">
+            <div class="project-img-inner">
+              <i class="fas fa-chart-line project-icon"></i>
+              <div class="project-img-blur"></div>
+            </div>
+            <div class="project-overlay">
+              <a href="https://tradevault-frontend-1nz2.onrender.com" target="_blank" class="overlay-btn"><i class="fas fa-external-link-alt"></i> User App</a>
+              <a href="https://tradevault-dashboard.onrender.com" target="_blank" class="overlay-btn"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+              <button class="overlay-btn" onclick="openModal('tradevault')"><i class="fas fa-eye"></i> Details</button>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-meta">
+              <span class="status-tag completed"><i class="fas fa-circle"></i> Deployed</span>
+              <span class="project-year">2024</span>
+            </div>
+            <h3 class="project-title">TradeVault</h3>
+            <p class="project-desc">Stock market platform with two separate deployed apps — a main trading frontend and a personal user dashboard — powered by one Node.js backend.</p>
+            <div class="project-stack">
+              <span>React</span><span>Node.js</span><span>Express</span><span>MongoDB</span><span>REST API</span>
+            </div>
+            <div class="project-actions">
+              <button class="btn btn-primary btn-sm" onclick="openModal('tradevault')">
+                <i class="fas fa-info-circle"></i> Case Study
+              </button>
+              <a href="https://github.com/archipriya03/TradeVault" target="_blank" class="btn btn-ghost btn-sm">
+                <i class="fab fa-github"></i> Code
+              </a>
+              <a href="https://tradevault-frontend-1nz2.onrender.com" target="_blank" class="btn btn-live btn-sm">
+                <i class="fas fa-external-link-alt"></i> Frontend
+              </a>
+              <a href="https://tradevault-dashboard.onrender.com" target="_blank" class="btn btn-live btn-sm">
+                <i class="fas fa-tachometer-alt"></i> Dashboard
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════ DSA ════════════════════ -->
+  <section class="section dsa" id="dsa">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">// 04 — Problem Solving</span>
+        <h2 class="section-title centered">DSA &amp; <em>Coding</em></h2>
+        <p class="section-sub">Building the algorithmic foundation for scalable software</p>
+      </div>
+      <div class="dsa-grid">
+        <div class="dsa-card reveal">
+          <div class="dsa-card-top">
+            <div class="dsa-icon"><i class="fab fa-github"></i></div>
+            <div>
+              <h3>GitHub Profile</h3>
+              <span class="dsa-handle">@archipriya03</span>
+            </div>
+          </div>
+          <p>Repositories showcasing DSA solutions, backend projects, and my full development journey.</p>
+          <a href="https://github.com/archipriya03" target="_blank" class="btn btn-outline btn-sm">
+            <i class="fab fa-github"></i> View Profile
+          </a>
+          <div class="dsa-stats-row">
+            <div class="dsa-mini-stat"><span>3+</span><label>Live Repos</label></div>
+            <div class="dsa-mini-stat"><span>Daily</span><label>Practice</label></div>
+            <div class="dsa-mini-stat"><span>9+</span><label>CGPA</label></div>
+          </div>
+        </div>
+
+        <div class="dsa-card reveal">
+          <div class="dsa-card-top">
+            <div class="dsa-icon blue"><i class="fas fa-code"></i></div>
+            <div><h3>Topics Covered</h3><span class="dsa-handle">Primarily Java</span></div>
+          </div>
+          <p>Structured problem-solving across all major DSA topics, practised regularly in Java.</p>
+          <div class="topic-tags">
+            <span>Arrays</span><span>Linked Lists</span><span>Stacks & Queues</span>
+            <span>Binary Trees</span><span>Graphs</span><span>Dynamic Programming</span>
+            <span>Sorting</span><span>Recursion</span><span>Hashing</span>
+          </div>
+        </div>
+
+        <div class="dsa-card reveal">
+          <div class="dsa-card-top">
+            <div class="dsa-icon green"><i class="fas fa-chart-bar"></i></div>
+            <div><h3>Progress</h3><span class="dsa-handle">Consistent growth</span></div>
+          </div>
+          <p>Building instinct through structured practice — from easy problems to complex graph algorithms.</p>
+          <div class="progress-items">
+            <div class="progress-item">
+              <span class="diff easy">Easy</span>
+              <div class="mini-bar"><div class="mini-fill green-fill" data-width="80"></div></div>
+              <span class="pct">80%</span>
+            </div>
+            <div class="progress-item">
+              <span class="diff med">Medium</span>
+              <div class="mini-bar"><div class="mini-fill yellow-fill" data-width="55"></div></div>
+              <span class="pct">55%</span>
+            </div>
+            <div class="progress-item">
+              <span class="diff hard">Hard</span>
+              <div class="mini-bar"><div class="mini-fill red-fill" data-width="30"></div></div>
+              <span class="pct">30%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════ ACHIEVEMENTS ════════════════════ -->
+  <section class="section achievements" id="achievements">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">// 05 — Recognition</span>
+        <h2 class="section-title centered">Achievements &amp; <em>Experience</em></h2>
+      </div>
+      <div class="achievements-grid">
+        <div class="achievement-card reveal">
+          <div class="ach-number">01</div>
+          <div class="ach-content">
+            <div class="ach-icon-wrap"><i class="fas fa-trophy"></i></div>
+            <div class="ach-badge">National Competition</div>
+            <h3>EY Techathon</h3>
+            <p>Participated in Ernst & Young's national-level technology hackathon. Collaborated in a team to design and develop innovative tech solutions under real-world time pressure.</p>
+            <div class="ach-chips">
+              <span>Hackathon</span><span>Team Work</span><span>Innovation</span><span>Problem Solving</span>
+            </div>
+          </div>
+        </div>
+        <div class="achievement-card reveal">
+          <div class="ach-number">02</div>
+          <div class="ach-content">
+            <div class="ach-icon-wrap nss"><i class="fas fa-hands-helping"></i></div>
+            <div class="ach-badge volunteer">Volunteer</div>
+            <h3>NSS Volunteer</h3>
+            <p>Active National Service Scheme volunteer, leading community development drives, social awareness campaigns, and organizing large-scale events for student and public welfare.</p>
+            <div class="ach-chips">
+              <span>Leadership</span><span>Community Service</span><span>Event Management</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════ RESUME CTA ════════════════════ -->
+  <section class="resume-section">
+    <div class="container">
+      <div class="resume-cta reveal">
+        <div class="resume-cta-left">
+          <span class="resume-eyebrow">Ready to collaborate?</span>
+          <h2>Download my <em>Resume</em></h2>
+          <p>Complete overview of my education, skills, projects, and achievements — ready for placement or internship review.</p>
+        </div>
+        <div class="resume-cta-right">
+          <a href="resume.pdf" class="btn btn-primary btn-lg btn-glow" download>
+            <i class="fas fa-file-pdf"></i> Download Resume
+          </a>
+          <a href="#contact" class="btn btn-ghost btn-lg">
+            <i class="fas fa-comment"></i> Let's Talk
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════ CONTACT ════════════════════ -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">// 06 — Contact</span>
+        <h2 class="section-title centered">Let's <em>Connect</em></h2>
+        <p class="section-sub">Open to internships, full-time roles, and freelance projects</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <h3>Say Hello <span class="wave">👋</span></h3>
+          <p>Currently seeking <strong>software development internships and entry-level roles</strong>. Whether you have a position, a project, or just want to chat tech — I'm all ears.</p>
+          <div class="contact-links">
+            <a href="mailto:archipriya03@gmail.com" class="contact-link" onclick="window.location.href='mailto:archipriya03@gmail.com';return false;">
+              <div class="cl-icon email"><i class="fas fa-envelope"></i></div>
+              <div class="cl-text">
+                <span>Email</span>
+                <p>archipriya03@gmail.com</p>
+              </div>
+              <i class="fas fa-arrow-right cl-arrow"></i>
+            </a>
+            <a href="https://linkedin.com/in/archi-priya-5b81122b7" target="_blank" class="contact-link">
+              <div class="cl-icon linkedin"><i class="fab fa-linkedin-in"></i></div>
+              <div class="cl-text">
+                <span>LinkedIn</span>
+                <p>archi-priya-5b81122b7</p>
+              </div>
+              <i class="fas fa-arrow-right cl-arrow"></i>
+            </a>
+            <a href="https://github.com/archipriya03" target="_blank" class="contact-link">
+              <div class="cl-icon github"><i class="fab fa-github"></i></div>
+              <div class="cl-text">
+                <span>GitHub</span>
+                <p>github.com/archipriya03</p>
+              </div>
+              <i class="fas fa-arrow-right cl-arrow"></i>
+            </a>
+          </div>
+        </div>
+
+        <form class="contact-form reveal" id="contactForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Your name" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="your@email.com" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="Internship opportunity / Project collaboration" />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Hi Archi, I'd love to discuss..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full btn-glow" id="submitBtn">
+            <i class="fas fa-paper-plane"></i> Send Message
+          </button>
+          <div class="form-note">
+            <i class="fas fa-info-circle"></i>
+            I typically respond within 24 hours.
+          </div>
+          <div class="form-success" id="formSuccess">
+            <i class="fas fa-check-circle"></i> Message sent! I'll get back to you soon.
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════ FOOTER ════════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo"><span class="logo-bracket">&lt;</span>AP<span class="logo-bracket">/&gt;</span></div>
+          <p>MCA Student · Full Stack Developer<br />Banasthali Vidyapith</p>
+          <div class="footer-social">
+            <a href="https://github.com/archipriya03" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/archi-priya-5b81122b7" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="mailto:archipriya03@gmail.com" aria-label="Email" onclick="window.location.href='mailto:archipriya03@gmail.com';return false;"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+        <div class="footer-links-col">
+          <h5>Navigation</h5>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-links-col">
+          <h5>Projects</h5>
+          <ul>
+            <li><a href="https://wanderlust-project-jruw.onrender.com" target="_blank">Wanderlust</a></li>
+            <li><a href="https://rbac-nodejs-project.onrender.com" target="_blank">RBAC System</a></li>
+            <li><a href="https://tradevault-frontend-1nz2.onrender.com" target="_blank">TradeVault</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Archi Priya. Designed &amp; built with <i class="fas fa-heart"></i> by Archi Priya.</p>
+        <button class="back-top" id="backTop" aria-label="Back to top">
+          <i class="fas fa-arrow-up"></i>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ════════════════════ MODALS ════════════════════ -->
+
+  <!-- Wanderlust Modal -->
+  <div class="modal" id="modal-wanderlust" role="dialog" aria-modal="true" aria-labelledby="wl-title">
+    <div class="modal-backdrop" onclick="closeModal('wanderlust')"></div>
+    <div class="modal-container">
+      <button class="modal-close" onclick="closeModal('wanderlust')" aria-label="Close"><i class="fas fa-times"></i></button>
+      <div class="modal-header wanderlust-bg">
+        <i class="fas fa-map-marked-alt modal-hero-icon"></i>
+        <div class="modal-header-overlay">
+          <span class="status-tag completed"><i class="fas fa-circle"></i> Live on Render</span>
+        </div>
+      </div>
+      <div class="modal-body">
+        <h2 id="wl-title">Wanderlust</h2>
+        <p class="modal-subtitle">Airbnb-style property listing & booking platform</p>
+        <div class="modal-stack">
+          <span>Node.js</span><span>Express.js</span><span>MongoDB</span><span>EJS</span><span>Cloudinary</span><span>Leaflet.js</span><span>Passport.js</span>
+        </div>
+        <div class="modal-links">
+          <a href="https://wanderlust-project-jruw.onrender.com" target="_blank" class="btn btn-primary btn-sm"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+          <a href="https://github.com/archipriya03" target="_blank" class="btn btn-ghost btn-sm"><i class="fab fa-github"></i> GitHub</a>
+        </div>
+
+        <div class="modal-section">
+          <h4><i class="fas fa-bullseye"></i> Problem Statement</h4>
+          <p>Travelers need a platform to discover and list unique stays. Wanderlust solves this with a full-featured Airbnb-inspired web app — complete with auth, maps, and cloud image hosting.</p>
+        </div>
+        <div class="modal-section">
+          <h4><i class="fas fa-check-double"></i> What I Built</h4>
+          <ul>
+            <li>Full user authentication & authorization with Passport.js (local strategy)</li>
+            <li>CRUD operations for property listings with ownership checks</li>
+            <li>Cloud image uploads via Cloudinary with URL generation</li>
+            <li>Interactive property location maps using Leaflet.js with OpenStreetMap tiles</li>
+            <li>User review and star rating system</li>
+            <li>Flash messages, error middleware, and input validation</li>
+            <li>MVC architecture with clean route separation</li>
+            <li>Fully responsive — works on all screen sizes</li>
+          </ul>
+        </div>
+        <div class="modal-section">
+          <h4><i class="fas fa-tools"></i> Engineering Decisions</h4>
+          <ul>
+            <li>Used Mongoose for schema design with validation at the model level</li>
+            <li>Implemented middleware-based authorization (only owners can edit/delete)</li>
+            <li>Multer + Cloudinary integration for seamless image upload and URL generation</li>
+            <li>Session-based auth with connect-mongo for persistent sessions</li>
+          </ul>
+        </div>
+        <div class="modal-section future-section">
+          <h4><i class="fas fa-rocket"></i> Planned Improvements</h4>
+          <ul>
+            <li>📅 Calendar-based booking with availability blocking</li>
+            <li>💬 Real-time host-guest messaging via Socket.io</li>
+            <li>💳 Payment integration with Razorpay</li>
+            <li>🔍 Advanced search & filters (price range, location radius)</li>
+            <li>📊 Host analytics dashboard</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- RBAC Modal -->
+  <div class="modal" id="modal-rbac" role="dialog" aria-modal="true" aria-labelledby="rbac-title">
+    <div class="modal-backdrop" onclick="closeModal('rbac')"></div>
+    <div class="modal-container">
+      <button class="modal-close" onclick="closeModal('rbac')" aria-label="Close"><i class="fas fa-times"></i></button>
+      <div class="modal-header rbac-bg">
+        <i class="fas fa-shield-alt modal-hero-icon"></i>
+        <div class="modal-header-overlay">
+          <span class="status-tag completed"><i class="fas fa-circle"></i> Live on Render</span>
+        </div>
+      </div>
+      <div class="modal-body">
+        <h2 id="rbac-title">RBAC System</h2>
+        <p class="modal-subtitle">Role-Based Access Control with JWT authentication</p>
+        <div class="modal-stack">
+          <span>Node.js</span><span>Express.js</span><span>MongoDB</span><span>JWT</span><span>bcrypt</span><span>REST API</span>
+        </div>
+        <div class="modal-links">
+          <a href="https://rbac-nodejs-project.onrender.com" target="_blank" class="btn btn-primary btn-sm"><i class="fas fa-external-link-alt"></i> Live API</a>
+          <a href="https://github.com/archipriya03" target="_blank" class="btn btn-ghost btn-sm"><i class="fab fa-github"></i> GitHub</a>
+        </div>
+
+        <div class="modal-section">
+          <h4><i class="fas fa-bullseye"></i> Problem Statement</h4>
+          <p>Most beginner APIs skip proper access control entirely. This project implements production-standard RBAC — where different users (Admin, Manager, User) have distinct, enforced permissions across all routes.</p>
+        </div>
+        <div class="modal-section">
+          <h4><i class="fas fa-check-double"></i> What I Built</h4>
+          <ul>
+            <li>Three-tier role system: Admin, Manager, and User with distinct access levels</li>
+            <li>JWT-based stateless authentication with token expiry</li>
+            <li>Password hashing with bcrypt (salt rounds configurable)</li>
+            <li>Role-checking middleware applied per route</li>
+            <li>User registration, login, logout, and profile APIs</li>
+            <li>Admin-only routes for user management and role assignment</li>
+            <li>RESTful API design with proper HTTP status codes and error messages</li>
+            <li>Input validation and centralized error handling</li>
+          </ul>
+        </div>
+        <div class="modal-section">
+          <h4><i class="fas fa-tools"></i> Engineering Decisions</h4>
+          <ul>
+            <li>Chose JWT for stateless auth — scalable for microservices</li>
+            <li>Role stored in JWT payload to avoid extra DB calls per request</li>
+            <li>Middleware chain: authenticate → authorize(role) → handler</li>
+            <li>Separate routers for auth, user, and admin operations</li>
+          </ul>
+        </div>
+        <div class="modal-section future-section">
+          <h4><i class="fas fa-rocket"></i> Planned Improvements</h4>
+          <ul>
+            <li>🔄 Refresh token rotation for seamless session management</li>
+            <li>📧 Email verification on registration with OTP</li>
+            <li>🔐 OAuth2 social login (Google, GitHub)</li>
+            <li>📋 Audit log — track every privileged action</li>
+            <li>🌐 React admin dashboard frontend</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TradeVault Modal -->
+  <div class="modal" id="modal-tradevault" role="dialog" aria-modal="true" aria-labelledby="tv-title">
+    <div class="modal-backdrop" onclick="closeModal('tradevault')"></div>
+    <div class="modal-container">
+      <button class="modal-close" onclick="closeModal('tradevault')" aria-label="Close"><i class="fas fa-times"></i></button>
+      <div class="modal-header tradevault-bg">
+        <i class="fas fa-chart-line modal-hero-icon"></i>
+        <div class="modal-header-overlay">
+          <span class="status-tag completed"><i class="fas fa-circle"></i> 2 Frontends · 1 API · Live</span>
+        </div>
+      </div>
+      <div class="modal-body">
+        <h2 id="tv-title">TradeVault</h2>
+        <p class="modal-subtitle">Stock market platform with two deployed frontends</p>
+        <div class="modal-stack">
+          <span>React</span><span>Node.js</span><span>Express.js</span><span>MongoDB</span><span>REST API</span><span>Chart.js</span>
+        </div>
+        <div class="modal-links">
+          <a href="https://tradevault-frontend-1nz2.onrender.com" target="_blank" class="btn btn-primary btn-sm"><i class="fas fa-external-link-alt"></i> User App</a>
+          <a href="https://tradevault-dashboard.onrender.com" target="_blank" class="btn btn-live btn-sm"><i class="fas fa-tachometer-alt"></i> User Dashboard</a>
+          <a href="https://github.com/archipriya03" target="_blank" class="btn btn-ghost btn-sm"><i class="fab fa-github"></i> GitHub</a>
+        </div>
+
+        <div class="modal-section">
+          <h4><i class="fas fa-bullseye"></i> Problem Statement</h4>
+          <p>TradeVault is a stock market platform built with a React frontend for browsing and tracking stocks, and a separate personal dashboard where each registered user can view their own portfolio and activity. Both apps share one Express/MongoDB backend.</p>
+        </div>
+        <div class="modal-section">
+          <h4><i class="fas fa-check-double"></i> What I Built</h4>
+          <ul>
+            <li>Two React frontends: main trading app and personal user dashboard</li>
+            <li>Single Node.js + Express backend serving both apps via REST API</li>
+            <li>Stock listings with price, volume, and trend data</li>
+            <li>User authentication and protected routes on both frontends</li>
+            <li>Data visualization with charts for market trends</li>
+            <li>Per-user dashboard showing individual portfolio and activity</li>
+            <li>CORS configured for multiple frontend domains</li>
+            <li>Deployed all three services independently on Render</li>
+          </ul>
+        </div>
+        <div class="modal-section">
+          <h4><i class="fas fa-tools"></i> Engineering Decisions</h4>
+          <ul>
+            <li>Dual-frontend architecture demonstrates separation of concerns at scale</li>
+            <li>Shared REST API with user-specific data responses per authenticated session</li>
+            <li>Environment-based CORS whitelist to allow both frontends on prod</li>
+            <li>React state management without Redux — kept lightweight intentionally</li>
+          </ul>
+        </div>
+        <div class="modal-section future-section">
+          <h4><i class="fas fa-rocket"></i> Planned Improvements</h4>
+          <ul>
+            <li>📈 Live stock price feeds via WebSocket (real-time updates)</li>
+            <li>💼 Virtual portfolio — buy/sell stocks with simulated balance</li>
+            <li>🔔 Price alert notifications via email</li>
+            <li>📊 Candlestick chart patterns with historical data</li>
+            <li>🤖 Basic ML model for stock trend prediction</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
