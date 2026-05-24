@@ -221,43 +221,15 @@ document.addEventListener('keydown', e => {
   }
 });
 
-/* ── CONTACT FORM — Formspree ── */
-const form       = document.getElementById('contactForm');
-const submitBtn  = document.getElementById('submitBtn');
-const successMsg = document.getElementById('formSuccess');
+/* ── CONTACT FORM — Native Formspree (no JS interference) ── */
+const form      = document.getElementById('contactForm');
+const submitBtn = document.getElementById('submitBtn');
 
-form?.addEventListener('submit', async e => {
-  e.preventDefault(); // We handle it via fetch so page doesn't reload
-
-  const data = new FormData(form);
+// Just show loading spinner — form submits natively to Formspree
+form?.addEventListener('submit', e => {
   submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
   submitBtn.disabled = true;
-
-  try {
-    const res = await fetch(form.action, {
-      method: 'POST',
-      body: data,
-      headers: { 'Accept': 'application/json' }
-    });
-
-    if (res.ok) {
-      // Success
-      submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
-      submitBtn.disabled = false;
-      if (successMsg) successMsg.style.display = 'flex';
-      form.reset();
-      setTimeout(() => { if (successMsg) successMsg.style.display = 'none'; }, 6000);
-    } else {
-      // Formspree returned an error
-      const json = await res.json();
-      throw new Error(json?.errors?.map(e => e.message).join(', ') || 'Form error');
-    }
-  } catch (err) {
-    submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
-    submitBtn.disabled = false;
-    alert('Oops! Something went wrong. Please email me directly at archipriya03@gmail.com');
-    console.error(err);
-  }
+  // Native form submission takes over — no preventDefault
 });
 
 /* ── BACK TO TOP ── */
